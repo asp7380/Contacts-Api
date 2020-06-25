@@ -1,0 +1,8 @@
+#vs cache
+/.vs
+
+#vs
+/obj
+
+#bin folder
+/bin

@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "14787a97-60a3-440d-8263-5141c08a3c23",
+		"name": "Create Contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"First\" : \"Tacos\",\r\n \"Middle\" : \"R\",\r\n \"Last\" : \"Wonderful\",\r\n \"Email\" : \"eattacos@geterdone.com\"\r\n,\r\n\"address\": [{ \r\n \"Street\" : \"123 Elm Street\",\r\n \"City\" : \"Atlanta\",\r\n \"State\" : \"GA\",\r\n \"Zip\" : \"23235\"\r\n}]\r\n,\r\n\"phone\" : [{\r\n    \"phoneNbr\" : \"800-225-9996\",\r\n    \"phoneType\" : \"home\"\r\n},\r\n{\r\n    \"phoneNbr\" : \"800-226-9995\",\r\n    \"phoneType\" : \"mobile\"\r\n}]\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/Contacts/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"Contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/Contacts/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"Contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/Contacts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"Contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETBYID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/Contacts/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"Contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"First\" : \"GetEr\",\r\n \"Middle\" : \"D\",\r\n \"Last\" : \"Done\",\r\n \"Email\" : \"marvelcommics@geterdone.com\"\r\n,\r\n\"address\": [{ \r\n \"Street\" : \"123 Elm Street\",\r\n \"City\" : \"Richmond\",\r\n \"State\" : \"VA\",\r\n \"Zip\" : \"23235\"\r\n}]\r\n,\r\n\"phone\" : [{\r\n    \"phoneNbr\" : \"804-222-9996\",\r\n    \"phoneType\" : \"home\"\r\n},\r\n{\r\n    \"phoneNbr\" : \"804-223-9995\",\r\n    \"phoneType\" : \"mobile\"\r\n}]\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/Contacts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"Contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

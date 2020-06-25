@@ -1,0 +1,69 @@
+POST
+----------------------------------------------------------------------
+curl --location --request POST 'https://localhost:44397/api/Contacts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "First" : "GetEr",
+ "Middle" : "D",
+ "Last" : "Done",
+ "Email" : "marvelcommics@geterdone.com"
+,
+"address": [{ 
+ "Street" : "123 Elm Street",
+ "City" : "Richmond",
+ "State" : "VA",
+ "Zip" : "23235"
+}]
+,
+"phone" : [{
+    "phoneNbr" : "804-222-9996",
+    "phoneType" : "home"
+},
+{
+    "phoneNbr" : "804-223-9995",
+    "phoneType" : "mobile"
+}]
+}'
+
+GET BY ID
+----------------------------------------------------------------------
+curl --location --request GET 'https://localhost:44397/api/Contacts/1'
+
+
+GET ALL
+----------------------------------------------------------------------
+curl --location --request GET 'https://localhost:44397/api/Contacts' \
+--data-raw ''
+
+
+DELETE
+----------------------------------------------------------------------
+curl --location --request DELETE 'https://localhost:44397/api/Contacts/1'
+
+
+PUT
+----------------------------------------------------------------------
+curl --location --request PUT 'https://localhost:44397/api/Contacts/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "First" : "Tacos",
+ "Middle" : "R",
+ "Last" : "Wonderful",
+ "Email" : "eattacos@geterdone.com"
+,
+"address": [{ 
+ "Street" : "123 Elm Street",
+ "City" : "Atlanta",
+ "State" : "GA",
+ "Zip" : "23235"
+}]
+,
+"phone" : [{
+    "phoneNbr" : "800-225-9996",
+    "phoneType" : "home"
+},
+{
+    "phoneNbr" : "800-226-9995",
+    "phoneType" : "mobile"
+}]
+}'
