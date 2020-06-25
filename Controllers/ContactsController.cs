@@ -103,9 +103,11 @@ namespace Contacts_Api.Controllers
                 if (contactList != null)
                 {
                     //Build a primary key / foriegn key relationship.
-                    contactListId = contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() == 1 ?
-                       contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() 
-                       : (contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() + 1);
+                    //contactListId = contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() == 1 ?
+                    //   contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() 
+                    //   : (contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault() + 1);
+
+                    contactListId = contactList.OrderByDescending(o => o.Id).Select(c => c.Id).FirstOrDefault();
 
 
                     //Loop through any addresses stored on the contact, and append to the database
